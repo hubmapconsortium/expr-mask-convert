@@ -1,5 +1,3 @@
 git+https://github.com/hubmapconsortium/sprm@ca3d3f91eb50522a889cf5c9b3e37b8cce4a7dd7
 git+https://github.com/hubmapconsortium/ome-utils@v0.3.5
-anndata
-pandas
-spatialdata
+pims==0.7

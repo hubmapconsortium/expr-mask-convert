@@ -9,6 +9,9 @@ RUN apt-get update \
  && rm -rf /var/cache/apt/*
 
 WORKDIR /opt
+RUN python3 -m pip install --upgrade pip setuptools wheel
+RUN python3 -m pip install anndata==0.11.3
+RUN python3 -m pip install spatialdata
 
 COPY docker/requirements.txt /opt
 RUN python3 -m pip install -r /opt/requirements.txt \
