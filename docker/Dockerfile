@@ -16,6 +16,10 @@ RUN python3 -m pip install -r /opt/requirements.txt \
  && rm -rf /root/.cache/pip
 
 RUN python3 -m pip install -U numexpr bottleneck
+RUN python3 -m pip install -U scikit-image
+RUN python3 -m pip install scikit-image==0.24.0
+RUN python3 -m pip install -U h5py
+RUN python3 -m pip install h5py
 
 COPY bin /opt
 
