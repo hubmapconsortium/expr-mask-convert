@@ -3,7 +3,7 @@ cwlVersion: v1.1
 class: CommandLineTool
 requirements:
   DockerRequirement:
-    dockerPull: hubmap/expr-mask-convert:0.1
+    dockerPull: hubmap/expr-mask-convert
   InlineJavascriptRequirement: {}
 baseCommand: "/opt/convert_input_ometiffs.py"
 
