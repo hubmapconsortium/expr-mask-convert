@@ -12,6 +12,7 @@ from sklearn.preprocessing import StandardScaler
 from sprm import modules
 from xarray import DataArray
 from spatialdata.models import Image2DModel, Labels2DModel, PointsModel, TableModel
+import tracemalloc
 
 desired_pixel_size_for_pyramid=250
 
@@ -140,6 +141,7 @@ def convert(expr: Path, mask: Path):
 
 
 def main(directory: Path):
+    tracemalloc.start()
     expr_dir, mask_dir = find_expr_mask_dir(directory)
     exprs = sorted(find_ome_tiffs(expr_dir))
     masks = sorted(find_ome_tiffs(mask_dir))
